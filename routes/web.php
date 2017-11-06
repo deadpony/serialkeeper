@@ -12,5 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    /** @var \App\Components\Keeper\Keeper $keeper */
+    $keeper = app(\App\Components\Keeper\Keeper::class);
+    return $keeper->explore('Stranger Things');
 });
